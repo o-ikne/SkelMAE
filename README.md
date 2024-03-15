@@ -5,7 +5,7 @@ This repository contains the source code for our paper:
 ![hippo](images/skelmae_approach.jpg)
 
 ## **Updates**
-- ...
+- code will be available soon
 
 ## **Installation**
 Create and activate conda environment:
