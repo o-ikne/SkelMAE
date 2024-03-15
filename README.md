@@ -10,8 +10,8 @@ This repository contains the source code for our paper:
 ## **Installation**
 Create and activate conda environment:
 ```
-conda create -n eMotionGAN python=3.10
-conda activate eMotionGAN
+conda create -n skelmae python=3.10
+conda activate skelmae
 ```
 
 Install all dependencies:
@@ -34,7 +34,7 @@ Dowload the evaluation datasets:
 - [**SHREC'17**](http://www-rech.telecom-lille.fr/shrec2017-hand/).
     
 ### Hand Pose Extraction
-We use [MediaPipe]() framework to extarct hand poses from RGB images (for subsets (training,validation and testing).
+We use [MediaPipe](https://developers.google.com/mediapipe) framework to extarct hand poses from RGB images (for subsets (training,validation and testing).
 
 ```
 python extract_hand_poses.py  --data_dir ./datasets/Briareo/ 
