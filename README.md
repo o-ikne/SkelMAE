@@ -5,7 +5,7 @@ This repository contains the source code for our paper:
 
 **Skeleton-based Self-Supervised Feature Extraction for Improved Dynamic Hand Gesture Recognition**
 
-![hippo](images/skelmae_approach.png)
+![hippo](images/skelmae_approach.jpg)
 
 ## **Updates**
 - ...
