@@ -19,14 +19,6 @@ Install all dependencies:
 pip install -r requirements.txt
 ```
 
-Install Jupyter Lab to visualize demo:
-```
-conda install -c conda-forge jupyterlab
-```
-
-Download the pre-trained weights file from [Google Drive](https://drive.google.com/file/d/1jnEIj0XQ5YA23HDItuF0gXMO-0UWTFK8/view?usp=drive_link). Move it to the `./weights` folder.
-
-
 ## Training
 Dowload the evaluation datasets:
 - [**Briareo**](https://aimagelab.ing.unimore.it/imagelab/page.asp?IdPage=31)
@@ -37,24 +29,22 @@ Dowload the evaluation datasets:
 We use [MediaPipe](https://developers.google.com/mediapipe) framework to extarct hand poses from RGB images (for subsets (training,validation and testing).
 
 ```
-python extract_hand_poses.py  --data_dir ./datasets/Briareo/ 
-                              --annotations_file ./datasets/Briareo/train.zip 
+python extract_hand_poses.py  --data_dir ./Path/to/IPN_Hand/ 
+                              --annotations_file ./Path/to/IPN_annotations.txt 
                               --subset training
-                              --save_dir ./datasets/Briareo/Landmarks/
+                              --save_dir ./datasets/IPN_Hand/Landmarks/
 ```
 
 ### Training
 
-Download [STGCN](https://github.com/yysijie/st-gcn) model.
-
 ```
-bash train.sh --config_file configs/briareo_configs.yaml
+bash train.sh --config_file configs/ipn_hand_config.yaml
 ```
 
 ## Evaluation
 
 ```
-bash eval.sh --config_file configs/briareo_configs.yaml
+bash eval.sh --config_file configs/ipn_hand_config.yaml
 ```
 
 ## Citation
