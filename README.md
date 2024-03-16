@@ -28,10 +28,18 @@ Dowload the evaluation datasets:
 ### Hand Pose Extraction
 We use [MediaPipe](https://developers.google.com/mediapipe) framework to extarct hand poses from RGB images (for subsets (training,validation and testing).
 
+- For training set:
 ```
 python extract_hand_poses.py  --data_dir ./Path/to/IPN_Hand/ 
-                              --annotations_file ./Path/to/IPN_annotations.txt 
-                              --subset training
+                              --annotations_file ./Path/to/IPN_train_annotations.txt 
+                              --subset training-set
+                              --save_dir ./datasets/IPN_Hand/Landmarks/
+```
+- For testing set
+```
+python extract_hand_poses.py  --data_dir ./Path/to/IPN_Hand/ 
+                              --annotations_file ./Path/to/IPN_test_annotations.txt 
+                              --subset test-set
                               --save_dir ./datasets/IPN_Hand/Landmarks/
 ```
 
